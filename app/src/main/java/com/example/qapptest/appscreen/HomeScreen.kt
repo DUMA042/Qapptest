@@ -11,6 +11,7 @@ import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
@@ -18,12 +19,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
-import com.example.mainappcenter.ui.theme.bordergreeny
-import com.example.mainappcenter.ui.theme.cardcolor
-import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.navigation.NavHostController
-import com.example.mainappcenter.BottomBarComponents
-import com.example.mainappcenter.ButtonTransitionScreen
+import com.example.qapptest.UINav.BottomBarComponents
+import com.example.qapptest.ui.theme.bordergreeny
+import com.example.qapptest.ui.theme.cardcolor
 
 
 @ExperimentalMaterialApi
@@ -42,8 +41,7 @@ fun HomeUIBody(names: List<String> = List(7) { "$it" },navController: NavHostCon
         Card(backgroundColor = cardcolor,
             elevation = 7.dp, modifier = Modifier
                 .fillMaxWidth()
-                .padding(2.dp), shape = RoundedCornerShape(8.dp),onClick = {navController?.navigate(
-                ButtonTransitionScreen.Setting.rounte ) }
+                .padding(2.dp), shape = RoundedCornerShape(8.dp),onClick = {}
         ) {
             Row {
                 Surface(
@@ -80,7 +78,7 @@ fun listofVaccineCenters(centerName:String,centerStatus:String,centerDistance:Do
 
     Row (modifier = Modifier
         .fillMaxWidth()
-        .padding(top = 4.dp).clickable { navController?.navigate(BottomBarComponents.YourQueue.route)}){
+        .padding(top = 4.dp).clickable {}){
         Surface(
             modifier = Modifier.size(50.dp),
             shape = CircleShape,
