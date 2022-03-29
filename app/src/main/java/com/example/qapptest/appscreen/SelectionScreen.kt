@@ -55,7 +55,7 @@ fun SelectionScreen(vaccineCenterName:String,vaccineCenterStatus:String,vaccineN
         ) {
             Column {
                 Row() {
-                    Text("VACCINE TYPE:", style = MaterialTheme.typography.body2, fontSize = 25.sp, modifier = Modifier.padding(top = 5.dp, start = 3.dp))
+                    Text("VACCINATION TYPE:", style = MaterialTheme.typography.body2, fontSize = 25.sp, modifier = Modifier.padding(top = 5.dp, start = 3.dp))
                     Text (vaccineNames,style = MaterialTheme.typography.body2, fontSize = 25.sp, modifier = Modifier.padding(top = 5.dp))
                 }
                 Divider(color = Color.Black, modifier = Modifier
